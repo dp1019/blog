@@ -1,0 +1,125 @@
+<!--pages/order/ordersub/index.wxml-->
+<view class='box'>
+  
+    <!-- 收货地址  -->
+    <view class='address'>
+      <view class='info'>
+        <view class='orderimg'>
+          <image src='{{img}}'></image>
+        </view>
+        <view class='site'>
+          <text wx:if="{{!addressList.length}}" bindtap='addAddress'>新增收货地址</text>
+          <block wx:else>
+            <picker value="{{address}}" range="{{list}}" bindchange="normalPickerBindchange4">
+              {{addressList[address].address}}
+            </picker>
+          </block>
+          <!-- <text></text> -->
+        </view>
+        <view class='arrow'>
+          <image src='../images/arrow.png' bindtap="arrowImg"></image>
+        </view>
+        <view class='clear'></view>
+      </view>
+    </view>
+    <!-- 配送时间  -->
+    <view class='distributionTime'>
+      <text>配送时间</text>
+      <view class='disword'>
+        <picker mode="date" value="{{dateValue}}" start="1990-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+          {{dateValue}}
+        </picker>
+        <view class='disImg'>
+          <image src='../images/arrow.png'></image>
+        </view> 
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 时间段  -->
+    <view class='timeSlot'>
+      <text>时 间 段</text>
+      <view class='slotWord'>
+        <picker value="{{picker1Value}}" range="{{picker1Range}}" bindchange="normalPickerBindchange">
+            {{picker1Range[picker1Value]}}
+        </picker>
+        <view class='slotImg'>
+          <image src='../images/arrow.png'></image>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 提示 -->
+    <view class='Prompt'>
+      温馨提示：提交订单后配送时间不可再修改
+    </view>
+    <!-- 购买产品  -->
+    <view class='commodity'  wx:for="{{readyToOrder}}">
+      <!-- 商品图片  -->
+      <view class='comImg'>
+        <image src='{{item.cake.imgs[0]}}'></image>
+      </view>
+      <!-- 商品详情  -->
+      <view class='details'>
+        <view class='cakeName'>
+          <text>{{item.cake.title}}</text>
+          <text>￥{{item.nowPrice}}</text>
+        </view>
+        <text>蛋糕规格:</text>
+        <view class='cakeNum'>
+          <text>{{item.standard_name}}</text>
+          <text>×{{item.num}}</text>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 留言 -->
+    <view class='leaveWord'>
+      <view class='Lword'>
+        <text>留</text>
+        <text>言</text>
+      </view>
+      <view class='Lmess'>
+        <input type="text" placeholder='如有什么需要告诉我们，请给我们留言哦' placeholder-class="phcolor" bindinput="bindKeyInput"/>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 优惠券 -->
+    <view class='subCoupon'>
+      <view class='subword'>
+        <text>优</text>
+        <text>惠</text>
+        <text>劵</text>
+      </view>
+      <view class='subCou'>
+        <text>选择地址后，可选择优惠劵</text>
+        <view class='subImg'>
+          <image src='../images/arrow.png'>
+        </image></view>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view class='subCoupon1'>
+        <view class='cakeSize'>
+          <picker value="{{picker2Value}}" range="{{picker2Range}}" bindchange="normalPickerBindchange2">
+              数字蜡烛{{picker2Range[picker2Value]}}
+          </picker>
+        </view> 
+        <view class='cakeSize'>
+          <picker value="{{picker3Value}}" range="{{picker3Range}}" bindchange="normalPickerBindchange3">
+              {{picker3Range[picker3Value]}}随机贺卡
+          </picker>
+        </view> 
+        <view style='clear:both;'></view>  
+      </view>
+     
+</view>
+<!-- 付钱 -->
+<view class='Pay'>
+  <view class='payPrice'>
+    合计： ￥{{totalprice}}
+  </view>
+  <view class='toPrice' bindtap='toOrder'>
+    提交订单
+  </view>
+  <view class='clear'></view>
+</view> 

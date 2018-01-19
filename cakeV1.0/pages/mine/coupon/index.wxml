@@ -1,0 +1,34 @@
+<!--pages/mine/coupon/index.wxml-->
+<!--可使用/已失效  -->
+<view class='container100'>
+    <view data-num = "1" data-condition="{{condition}}" class="{{num==1?'selected':'unSelected'}} left"  bindtap='changeCoupon'>可使用优惠券</view>
+    <view class='vLine left'></view>
+    <view data-num = "2" data-condition="{{!condition}}" class="{{num==2?'selected':'unSelected'}} right" bindtap='changeCoupon'>已失效优惠券</view>
+</view>
+<view class='clear'></view>
+<!--渲染可使用优惠券  -->
+<view class='container92' wx:if="{{num == 1}}">
+    <view class='relative' wx:for="{{coupon}}">
+        <image src='{{item.couponImg}}' mode='widthFix'></image>
+        <text class='icon absolute'>￥</text>
+        <text class='coupon_discount absolute'>{{item.coupon_discount}}</text>
+        <text class='rule absolute'>规则满{{item.coupon_enough}}-{{item.coupon_minus}}优惠</text>
+        <text class='date absolute'>有效期{{item.overdueDate}}</text>
+    </view>
+</view>
+
+<!--渲染已失效优惠券  -->
+<view class='container92' wx:else>
+    <view class='relative' wx:for="{{couponOverdue}}">
+        <image src='{{item.couponOverdueImg}}' mode='widthFix'></image>
+        <text class='iconOverdue absolute'>￥</text>
+        <text class='couponOverdue_discount absolute'>{{item.couponOverdue_discount}}</text>
+        <text class='ruleOverdue absolute'>规则满{{item.couponOverdue_enough}}-{{item.couponOverdue_minus}}优惠</text>
+        <text class='dateOverdue absolute'>有效期{{item.overdueDate}}</text>
+        <!--过期章  -->
+        <view class='overdueImg absolute'>
+            <image src='{{item.overdueImg}}' mode='widthFix'></image>
+        </view>
+    </view>
+</view>  
+

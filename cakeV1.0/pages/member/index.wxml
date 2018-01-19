@@ -1,0 +1,30 @@
+<!--pages/member/index.wxml-->
+<view class='box'>
+    <view class='memberlist'>
+      <view wx:for="{{cakes}}" class='list'>
+        <view class='cateimg'>
+          <navigator class='cakeParent' url='/pages/index/noComment/index?index={{index}}'>
+            <image src="{{item.imgs[0]}}"></image>
+          </navigator>
+          <view class='introduce'>
+            <view>{{item.title}}</view>
+            <view>
+              <text>会员优惠价</text>
+            </view>
+            <text class='discount'>￥{{item.standards[0].member_price}}</text>
+            <text class='originalPrice'>￥{{item.standards[0].price}}</text>
+          </view> 
+          <navigator class='cakeParent' url='/pages/index/noComment/index?index={{index}}'>
+            <button>购买</button>
+          </navigator>
+        </view>
+      </view>
+      <view class="{{showView?'board1':'board'}}" bindtap='board'>
+        <view class='popup'>
+          <view>是否绑定手机成为会员享受优惠</view>
+          <button bindtap='cancel'>取消</button>
+          <button bindtap='determine'>去绑定</button>
+        </view>
+      </view>
+    </view>
+</view>

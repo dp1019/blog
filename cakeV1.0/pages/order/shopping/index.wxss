@@ -1,0 +1,187 @@
+/* pages/shopping/index.wxss */
+/*整个大盒子*/
+.body{
+  width: 100%;
+  height: auto;
+}
+/* 头部的样式 */
+.header{
+  width:100%;
+  height: 89rpx;
+  background: #77b4c1;
+}
+.left{
+  width: 22%;
+  height: 89rpx;
+  float: left;
+}
+.yuan{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 24rpx;
+  border-radius: 50%;
+  float: left;
+  margin-left: 30rpx;
+}
+.whole{
+  width: 42%;
+  height: auto;
+  float: right;
+  margin-top: 24rpx;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  color: #fff;
+}
+.right{
+  width:12%;
+  height: auto;
+  margin-top: 24rpx;
+  margin-right:30rpx;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  float: right;
+  color: #fff;
+}
+/*中间内容部分的样式  */
+.main{
+  width:95%;
+  height: auto;
+  margin:  0 auto;
+}
+.list{
+  height: 231rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.quan{
+    width:40rpx;
+  height: 40rpx;
+  float: left;
+  margin-top: 100rpx;
+  position: relative;
+}
+.circle{
+  width:100%;
+  height: 100%
+}
+.active{
+  width: 26rpx;
+  height: 26rpx;
+  position: absolute;
+  top:9rpx;
+  right:8rpx;
+}
+.cake{
+   width: 160rpx;
+  height: 160rpx;
+  margin-top:40rpx;
+  margin-left: 30rpx;
+  float: left;
+
+}
+.cakes{
+  width:100%;
+  height: 100%;
+}
+.wenzi{
+  width: 32.8%;
+  height: auto;
+  float: left;
+  margin-left: 45rpx;
+  margin-top: 53rpx;
+}
+.classic{
+  width:100%;
+  font-size: 30rpx;
+  font-family:"微软雅黑";
+  color:#333;
+}
+.specifications{
+  width:100%;
+  height:auto;
+  font-family: "微软雅黑";
+  font-size:28rpx;
+  color:#999;
+  line-height: 52rpx;
+}
+.number{
+  width:100%;
+  height: auto;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+  color: #999;
+
+}
+.price{
+  width: 11.43%;
+  height:auto;
+  float: right;
+  margin-top: 45rpx;
+  margin-right: 30rpx;
+}
+.top{
+  height: auto;
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  color: #333;
+}
+.under{
+  height: auto;
+  font-family:"微软雅黑";
+  font-size: 30rpx;
+  color: #333;
+  float: right;
+  margin-top: 42rpx;
+}
+/*底部的样式  */
+.footer{
+width: 100%;
+position: fixed;
+bottom:0rpx;
+background:#f5f5f5;
+}
+.background{
+  width: 100%;
+  height: 126rpx;
+}
+.zuo{
+  width:60%;
+  height: 68rpx;
+  font-family:"微软雅黑";
+  font-size: 30rpx;
+  color: #333;
+  padding-top: 24rpx;
+  text-align: center;
+  float: left;
+}
+.you{
+  width:40%;
+   height: 68rpx;
+  font-family: "微软雅黑";
+  font-size: 36rpx;
+  color: #fff;
+  float: left;
+  padding-top: 24rpx;
+  text-align: center;
+  background: #58a4b4;
+}
+checkbox .wx-checkbox-input{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: none;
+   background:#58a4b4;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff;
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}

@@ -1,0 +1,34 @@
+<!--pages/order/comment/index.wxml-->
+<view class='box'>
+  <view class='content'>
+    <view class='product'>
+      <view class='productImg'>
+        <image src='{{dataimg}}'></image>
+      </view>
+      <view class='details'>
+        <view class='cakeName'>
+          <text>{{cakename}}</text>
+          <text>￥{{price}}</text>
+        </view>
+        <text>{{spec}}</text>
+        <view class='cakeNum'>
+          <text>{{candle}}</text>
+          <text>×{{num}}</text>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view class='comment'>
+      <form>
+        <textarea class='information' placeholder='喜欢我们的产品吗？留下您的评论会对我们很有帮助哦~'></textarea>
+        <view class='inImg'>
+          <image src='{{informationImg}}'></image>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view>
+    <button bindtap="clickArea">评论</button>
+  </view>
+</view>
+

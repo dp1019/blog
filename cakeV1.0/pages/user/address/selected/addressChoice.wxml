@@ -1,0 +1,26 @@
+<!--pages/address/addressChoice.wxml-->
+<view class='box'>
+  <view class='choiceList'>
+    <view class='list'  wx:for="{{userinfos.address}}" wx:for-item="itemName">
+      <view class='choiceimg'>
+        <image src='../images/address.png'></image>
+      </view>
+      <view class='location'>
+        <text>{{itemName.name}}</text>
+        <text>{{itemName.phone}}</text>
+        <text>{{itemName.address}}</text>
+      </view>
+      <view class='ico'>
+        <image  bindtap="bindViewTap1" src='../images/edit.png'></image>
+        <view>
+           <image src='../images/delete.png'></image>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view> 
+  </view>
+  <view>
+    <button bindtap="addAddress">新增地址</button>
+  </view>
+</view>
+

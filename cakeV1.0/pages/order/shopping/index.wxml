@@ -1,0 +1,46 @@
+<!--pages/shopping/index.wxml-->
+<!--购物车  -->
+<view class="body">
+  <!-- 头部 -->
+  <view class="header">
+  <!-- 左边的文字以及圆圈 -->
+    <view class="left">
+      <image class="yuan" src="images/quanyi.jpg"></image>
+      <view class="whole">全部</view>
+    </view>
+    <!-- 右边的编辑二字 -->
+    <navigator url="/pages/shoppingeditor/index"><view class="right">编辑</view></navigator>
+  </view>
+  <!-- 中间的内容部分 -->
+  <view class="main">
+    <view  wx:for="{{array}}" class="list">
+    <!--选中的圆圈 -->
+       <view class="quan">
+          <checkbox value="{{index}}"></checkbox>
+       </view>
+       <!--蛋糕图片  -->
+       <view class="cake" id="{{item.id}}">
+          <image src="{{item.cake}}" class="cakes"></image>
+       </view>
+       <!--文字  -->
+       <view class="wenzi" id="{{item.id}}">
+             <view class="classic">{{item.mediterranean}}</view>
+             <view class="specifications">{{item.specifications}}</view>
+             <view class="number">{{item.candle}}</view>
+       </view>
+       <!--价格  -->
+       <view class="price">
+          <text class="top">￥{{item.money}}</text>
+          <!--件数  -->
+          <text  class="under">×{{item.cash}}</text>
+       </view>
+    </view>
+  </view>
+  <view class="clear"></view>
+  <!--底部  -->
+    <view class="footer">
+          <view class="background"></view> 
+          <view class="zuo">合计：￥{{qian}}</view> 
+        <view class="you">去结算</view>   
+    </view>
+</view>

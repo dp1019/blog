@@ -1,0 +1,55 @@
+.relative{
+  position: relative;
+}
+.wrap{
+  width: 100%;
+}
+.clear{
+  clear: both;
+}
+.absolute{
+  position: absolute;
+}
+.fl{
+  float: left;
+}
+.abutton{
+  width: 100%;
+  color:#FFFFFF;
+  background-color:#58a4b4;
+  border-radius: 0;
+  bottom: 0;
+}
+.hoverbtn{
+  color: #FFFFFF;
+  background-color: #58a4b4;
+  opacity: 0.6;
+}
+.inputbox{
+  padding: 0 30rpx;
+}
+.lxr{
+  /* padding-left: 30rpx; */
+  padding: 20rpx 0;
+  width: 20%;
+  line-height: 32rpx;
+  font-size: 32rpx;
+  text-align:justify; 
+  text-align-last: justify;
+}
+.iimg{
+  width:25rpx;
+  height:50rpx;
+  right:30rpx;
+  top:12rpx;
+
+
+}
+.lxript{
+  height: 32rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  padding: 9rpx 0;
+  padding-left: 10rpx;
+}
+

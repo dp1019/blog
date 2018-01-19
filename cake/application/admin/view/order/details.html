@@ -1,0 +1,184 @@
+{include file="public/header" /}
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>订单详情</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal" name="edit_cate" id="edit_cate" method="post" action="{:url('edit_cate')}">
+                    <input type="hidden" name="id" value="{$order['id']}">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">订单号：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="order_num" type="text" class="form-control" disabled="disabled" name="name" value="{$order.order_num}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">收货人：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="member_id" type="text" class="form-control" disabled="disabled" name="name" value="{$order.consignee}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">收货人电话：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="member_id" type="text" class="form-control" disabled="disabled" name="name" value="{$order.receiving_telephone}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">收货地址：</label>
+                            <div class="input-group col-sm-4">
+                                <textarea id="address_id" type="text" class="form-control" disabled="disabled"  name="name">{$order.address}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">订单总额：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="actualCost" type="text" class="form-control"  disabled="disabled" name="name" value="{$order.total_price}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">订单状态：</label>
+                            <div class="input-group col-sm-4">
+                                <textarea id="status" type="text" class="form-control" disabled="disabled" name="name">{$order.status}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">客户留言：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="message" type="text" class="form-control" disabled="disabled" name="name" value="{$order.message}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">下单时间：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="create_time" type="text" class="form-control" disabled="disabled" name="name" value="{$order.created_time}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">配送日期：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="delivery_day" type="text" class="form-control" disabled="disabled" name="name" value="{$order.day}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">配送时间段：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="delivery_time" type="text" class="form-control" disabled="disabled" name="name" value="{$order.time}">
+                            </div>
+                        </div>
+                        {volist name='$order.orderdetails' id='v'}
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">产品图片：</label>
+                                <div class="input-group col-sm-4">
+                                    <img src="{$v['img']}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">产品名称：</label>
+                                <div class="input-group col-sm-4">
+                                    <input id="product_id" type="text" class="form-control" disabled="disabled" name="name" value="{$v['cake_name']}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">规格：</label>
+                                <div class="input-group col-sm-4">
+                                    <input id="standard_id" type="text" class="form-control" disabled="disabled" name="name" value="{$v['standard_name']}">
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label">数量：</label>
+                                <div class="input-group col-sm-4">
+                                    <input id="num" type="text" class="form-control" disabled="disabled" name="name" value="{$v['num']}">
+                                </div>
+                            </div>
+                        {/volist}
+                        <div class="hr-line-dashed"></div>
+                         <div class="form-group">
+                            <label class="col-sm-3 control-label">优惠券：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="standard_id" type="text" class="form-control" disabled="disabled" name="name" value="{$order.code.name}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                              <!--   <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> 保存</button>&nbsp;&nbsp;&nbsp; -->
+                                <a class="btn btn-danger" href="javascript:history.go(-1);"><i class="fa fa-close"></i> 返回</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{include file="public/footer" /}
+<script type="text/javascript">
+
+
+    $(function(){
+        $('#edit_cate').ajaxForm({
+            beforeSubmit: checkForm, 
+            success: complete, 
+            dataType: 'json'
+        });
+        
+        function checkForm(){
+            if( '' == $.trim($('#name').val())){
+                layer.msg('请输入分类名称',{icon:2,time:1500,shade: 0.1}, function(index){
+                layer.close(index);
+                });
+                return false;
+            }
+        }
+
+
+        function complete(data){
+            if(data.code==1){
+                layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                    window.location.href="{:url('product/index_cate')}";
+                });
+            }else{
+                layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1});
+                return false;   
+            }
+        }
+     
+    });
+
+
+
+    //IOS开关样式配置
+   var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#1AB394'
+        });
+    var config = {
+        '.chosen-select': {},                    
+    }
+    for (var selector in config) {
+        $(selector).chosen(config[selector]);
+    }
+
+</script>
+</body>
+</html>

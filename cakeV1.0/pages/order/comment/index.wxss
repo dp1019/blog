@@ -1,0 +1,106 @@
+/* pages/order/comment/index.wxss */
+.box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.content{
+  width: 90%;
+  height: auto;
+  margin: 30rpx auto 1rpx;
+  
+}
+.product{
+  width: 100%;
+  height: auto;
+}
+.productImg{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius:8%;
+  overflow: hidden;
+  float: left;
+}
+.productImg image{
+  width: 100%;
+  height: 100%;
+}
+.details{
+  width: 70%;
+  height: auto;
+  float: left;
+  margin-left: 6%;
+  font-family: '微软雅黑';
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 54rpx;
+}
+.cakeName{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  color: #333333;
+}
+.cakeName text:nth-child(2){
+  float: right;
+}
+.cakeNum text:nth-child(2){
+  float: right;
+  font-size: 30rpx;
+  color: #333333;
+}
+.clear{
+  clear: both;
+}
+.comment{
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+}
+.information{
+  width: 100%;
+  height:620rpx;
+  font-family: '微软雅黑';
+  font-size: 30rpx;
+  color: #999999;
+}
+.inImg{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius:8%;
+  overflow: hidden;
+}
+.inImg image{
+  width: 100%;
+  height: 100%;
+}
+.box view:nth-child(2) button{
+  width: 100%;
+  height: auto;
+  background: #58a4b4;
+  font-family: '微软雅黑';
+  font-size: 36rpx;
+  color: #ffffff;
+  line-height: 80rpx;
+  border-radius: 0rpx;
+  position: fixed;
+  bottom: 0;
+}
+.toast-out{
+  width: 400rpx;
+  height: 180rpx;
+  background: rgba(000, 000, 000, 0.3);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-family: '微软雅黑';
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 180rpx;
+  border-radius: 4%;
+}
+

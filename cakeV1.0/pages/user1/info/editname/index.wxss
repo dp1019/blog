@@ -1,0 +1,39 @@
+.box{
+  height: 1120rpx;
+}
+.pox{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+.fl{
+  float: left;
+}
+.vide{
+  width: 95%;
+  margin: 0 auto;
+}
+view{
+  width: 100%; 
+  font-size: 32rpx;
+  color: #333; 
+}
+text{
+  width: 80rpx;
+}
+image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+input{
+  width: 450rpx;
+  color: #ccc;
+  margin: 0 40rpx;
+}
+button{
+  background-color: #58a4b4;
+  color: #fff;
+}

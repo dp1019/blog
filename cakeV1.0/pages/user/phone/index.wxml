@@ -1,0 +1,18 @@
+<!--pages/product/index.wxml-->
+<view class='box'>
+    <form bindsubmit='codesubmit'>
+      <view  class='phonenum'>
+        <text>手机号码</text>
+        <input placeholder='请输入手机号码' bindblur='getphone' name='phone' value=''></input>
+        <button class='code' wx:if="{{code == 0}}" bindtap='getcode'>获取验证码</button>
+        <block wx:else>
+        <button class='coder' disabled="disabled" >{{code}}</button>
+        </block>
+      </view>
+      <view  class='phonenum'>
+        <text>验 证 码</text>
+        <input placeholder='请输入验证码' name='security' value=''></input>
+      </view>
+        <button form-type='submit' class='submit' > 提 交 </button>
+    </form>
+</view>

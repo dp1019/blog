@@ -1,0 +1,65 @@
+<view class='container'>
+  <view class='userinfo'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登 录</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class='userinfo-msg'>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class='userinfo-member' wx:if="{{member}}">会 员</text>
+        <block wx:else>
+          <text class='userinfo-regmember'>会员</text>
+        </block>
+        <image src='images/001.png' class='arrows'  bindtap="bindMyDatum"></image>
+      </view>
+    </block>
+  </view>
+  <view class='coupoi'>
+    <view class='coupon' bindtap='bindCoupon'>
+      <text>{{coupon}} 张</text>
+      <text>优 惠 券</text>
+    </view>
+    <view class='points' bindtap="bindintegrals">
+      <text>{{points}} 分</text>
+      <text>积 分</text>
+    </view>
+  </view>
+  <view class='project'>
+    <view class='photo'>
+      <text>手机号码</text>
+      <view  wx:if="{{!isbinding}}" class='isbinding' bindtap="bindPhone">
+        <image src='{{boult}}'></image>
+        <text>未绑定</text>
+      </view>
+      <block wx:else>
+        <view  wx:if="{{isbinding}}" class='isbinding' bindtap="unbindPhone">
+          <image src='{{boult}}'></image>
+          <text>解除绑定</text>
+        </view>
+      </block>
+    </view>
+    <view bindtap="bindshoping">
+      <text>我的购物车</text>
+      <image src='{{boult}}' class='shoping'></image>
+    </view>
+    <view bindtap="bindaddress">
+      <text>我的收货地址</text>
+      <image src='{{boult}}'></image>
+    </view>
+    <view bindtap="bindintegral">
+      <text>商城积分</text>
+      <image src='{{boult}}'></image>
+    </view>
+    <view bindtap="bindmymember">
+      <text>会员卡</text>
+      <image src='{{boult}}'></image>
+    </view>
+    <view bindtap="bindquestions">
+      <text>常见问题</text>
+      <image src='{{boult}}'></image>
+    </view>
+  </view>
+  <view class='myconfig'>
+    <view><text>客服电话:</text> {{myphone}}</view>
+    <view><text>服务时间:</text> {{myworking}}</view>
+  </view>
+</view>

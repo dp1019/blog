@@ -1,0 +1,39 @@
+<!--pages/integral/index.wxml-->
+<!-- <view class='top'>
+    <view class="{{ 0 == active ? 'active':''}}" bindtap="choose" data-value="0">全部</view>
+    <view class="{{cate.id == active?'active':''}}" wx:for="{{cates}}" wx:for-item="cate" bindtap="choose" data-value="{{cate.id}}">
+      {{cate.name}}
+    </view>
+</view> -->
+<view class='specialArea'>
+  <movable-area>
+    <movable-view style="width:{{optionNum}};" direction="horizontal" out-of-bounds="false" inertia="true" friction="3" damping="30">
+      <view class='bigbox'>
+          <!--选中后为 selectedOption 中定义的样式 -->
+        <view class="{{ 0 == active ? 'selectedOption':'options'}}" bindtap="choose" data-value="0">全部</view>
+        <view class="{{cate.id == active?'selectedOption':'options'}}" wx:for="{{cates}}" wx:for-item="cate"bindtap="choose" data-value="{{cate.id}}">
+              {{cate.name}}
+        </view> 
+      </view><!--选项结束  -->
+    </movable-view>
+  </movable-area>
+</view>
+<view class='integral-commodity'>
+  <view class='commodity' wx:for="{{integralCakes}}" >
+    <image src='{{item.imgs[0]}}'></image>
+    <view class='details'>
+      <view>{{item.title}}</view>  
+      <view>会员优惠价</view>
+      <text class='discount'>￥{{item.standards[0].member_price}}</text><text class='original'>￥{{item.standards[0].price}}</text>
+    </view>
+    <button bindtap="exchange" id='{{itemName.id}}' >{{item.integral}}积分兑换</button>
+  </view>
+  <view class="{{showView?'board1':'board'}}" bindtap='board'>
+    <view class='popup'>
+      <view>是否确定兑换</view>
+      <button bindtap='cancel'>取消</button>
+      <button bindtap='determine'>确定</button>
+    </view>
+  </view>
+  
+</view>

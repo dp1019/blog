@@ -1,0 +1,14 @@
+<view class='box'>
+<form>
+  <view class='pox'>
+    <view class='vide'>
+      <text class='fl'> 昵 称 </text>
+      <input type='text' placeholder='请输入新的昵称' class='fl'></input>
+      <image src='../../images/003.png' class='fl'></image>
+    </view>
+    <view>
+    <button> 保 存 </button>
+    </view>
+  </view>
+</form>
+</view>

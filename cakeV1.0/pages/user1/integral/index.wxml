@@ -1,0 +1,17 @@
+<view class='top'>
+  <view>
+    <text>我的积分: {{integral}}</text>
+  </view>
+</view>
+<view class='content'>
+  <view class='inte' wx:for="{{intes}}">
+    <view class='fl'>
+      <image src='../images/004.png'></image>
+    </view>
+    <view class='fl expense'>
+      <text>消费</text>
+      <text>{{item.date}} 获得{{item.integral}}积分</text>
+    </view>
+    <view class='fr money'>{{item.money}}</view>
+  </view>
+</view>

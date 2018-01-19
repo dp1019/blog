@@ -1,0 +1,85 @@
+<!--pages/product/productDetailsIntroduce.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="autoplay">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class='img'/>
+    </swiper-item>
+  </block>
+</swiper>
+<view id='main'>
+  <view class='line_height main_top'>
+    <view class='left productname'>产品名称：{{productName}}</view>
+    <view class='right productprice'>价格：￥{{price}}</view>
+    <view class='clear'></view>
+  </view>
+  <view class='specification' >
+    <view class='left'>
+        选择规格：{{specification}}
+    </view>
+    <view class='right'>></view>
+    <view class='clear'></view>
+  </view>
+  <!-- 10元优惠券等待领取 -->
+  <view class='discounts'><text>10元优惠券等待领取</text></view>
+  <view class='comment'>
+    <image src="images/com.png"></image>
+  </view>
+  <view>
+    <view>吃货评论（{{count}}）</view>
+    <view class='cate_box container100'>
+      <view wx:for="{{cate}}" class='text_center'>{{item.cateName}}</view>
+    </view>
+    <!--评论-->
+    <view>
+      <view wx:for="{{data}}" class='message_top'>
+      <!-- 评论用户头像 -->
+        <view class='left photo'>
+          <view>
+            <image src='{{item.photo}}'></image>
+          </view>  
+        </view>
+        <!-- 用户名字 -->
+        <view class='left message'>
+          <view>
+            <text class='left'>{{item.name}}</text>
+            <text class='right'>{{item.update_time}}</text>
+            <view class='clear'></view>
+          </view>
+          <view class='mesg'>{{item.message}}</view>
+          <text class='mesg' wx:if="{{item.reply != ''}}">
+          掌柜回复：{{item.reply}}
+          </text>
+        </view>
+        <view class='clear'></view>
+      </view>
+    </view>
+  <!-- 上面是用户评论   -->
+    <view class='check text_center'>查看全部评论</view>
+    <view class='introduce'>
+        <image src='{{introduce}}'></image>        
+    </view>
+    <view wx:for="{{intriduceDate}}" class='introduce_date'>
+        <view>{{item.title}}</view>
+        <view>口味： <text>{{item.flavor}}</text></view>
+        <view>甜度： <text>{{item.sweetness}}</text></view>
+        <view>适合人群： <text>{{item.crowd}}</text></view>
+        <view>保鲜时限： <text>{{item.retainFreshness}}</text></view>
+        <view>原材料： <text>{{item.material}}</text></view> 
+    </view>
+  </view>
+</view>
+<!-- 底部 -->
+<view id='footer' class='container100'>
+    <!-- 购物车 -->
+    <view class='shoping'>
+        <view>
+            <image src='{{shoping}}' class='shoping_img'></image>
+            <view class='shop_num text_center'>{{shop_num}}</view>
+        </view>
+        <view class='text_center'>购物车</view>
+    </view>
+    <!-- 加入购物车 -->
+    <view class='join text_center' hover-class='hover_join'>加入购物车</view>
+    <!-- 立即购买 -->
+    <view class='join text_center' hover-class='hover_join'>立即购买</view>
+</view>

@@ -1,0 +1,75 @@
+<!--pages/finishorder/index.wxml-->
+<!--完成订单提交的页面  -->
+<view class="body">
+  <view class="header">已完成</view>
+  <view class="bigaddress">
+    <view class="address">
+      <view><image src="images/address.jpg"  class="icon"></image></view>
+      <view class="contacts">
+          <view class="top">{{linkman}}</view>
+          <view class="site">{{address}}</view>
+      </view>
+    </view>
+  </view>
+   <view class="distributionTime">
+      <view class="upper">
+           <view class="give">配送时间</view>
+           <view class="time">{{time}}</view>
+      </view>
+      <view class="under">
+          <view class="timeSlot">时间段</view>
+          <view class="when">{{when}}</view>
+      </view>
+   </view>
+   <view class="main">
+      <view wx:for="{{array}}" class="cake">
+        <view class="center">
+            <view class="cakebing">
+                <image src="{{item.img}}" class="dangao"></image>
+            </view>
+             <view class="wenzi" id="{{item.id}}">
+                <view class="classic">{{item.mediterranean}}</view>
+                <view class="specifications">{{item.specifications}}</view>
+                <view class="number">{{item.candle}}</view>
+            </view>
+            <!--价格  -->
+             <view class="price">
+                 <text class="top">￥{{item.money}}</text>
+                <!--件数  -->
+                <view class="lower">×{{item.cash}}</view>
+            </view>
+        </view>
+            <view class="comment">
+                <text class="discuss">马上评论</text>
+          </view>
+      </view>
+      <view class="sum">合 计:￥{{sum}}</view>
+   </view>
+  <view class="message">
+      <view class="messageCenter">
+          <view class="words">
+              <text>留</text>
+              <text>言</text>
+          </view>
+            <input class="require" value='{{require}}'></input>
+          </view>
+   </view> 
+     <view class="bigcoupon">
+      <view class="couponCenter">
+        <view class="coupon">
+            <text>优</text>
+            <text>惠</text>
+            <text>券</text>
+        </view>
+            <text class="sale">-￥{{sale}}</text>
+      </view> 
+    </view> 
+       <view class="paymentCenter">
+          <view class="realpayment">
+            <text>实</text>
+            <text>付</text>
+            <text>款</text>
+          </view>
+              <text class="total">￥{{total}}</text>
+      </view>  
+</view>

@@ -1,0 +1,56 @@
+<!--pages/product/product.wxml-->
+<!--详情页图片  -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+  <block wx:for="{{cakeDetails.imgs}}">
+    <swiper-item>
+      <image src="{{item}}" class='img' mode='widhtFix'/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--详情页cake数据  -->
+<view class='container100'>
+  <view class='container92'><text class='cake_cate'>产品名称：{{cakeDetails.title}}</text><text class='price right'>价格: ￥{{nowPrice}}</text></view>
+  <view><text></text></view>
+</view>
+
+<view class='container100'>
+    <view class='container92'>
+        <!--规格  -->
+        <view><text class='standard'>规格</text></view>
+        <view class='cakeSizeBox'>
+            <!--默认选中的cake规格为 selectedCakeSize 中的样式  -->
+            <view class="{{index == active_number ? 'selectedCakeSize' : 'cakeSize'}}" wx:for="{{cakeDetails.standards}}" bindtap="change" data-index="{{index}}">{{item.name}}</view>
+        </view>
+        <!--其他，类名同规格的类名 -->
+        <!-- <view><text class='standard'>其他</text></view>
+        <view class='cakeSizeBox'>
+           <view class='cakeSize'>
+              <picker value="{{picker1Value}}" range="{{picker1Range}}" bindchange="normalPickerBindchange">
+                  数字蜡烛{{picker1Range[picker1Value]}}
+              </picker>
+           </view> 
+            <view class='cakeSize'>
+              <picker value="{{picker2Value}}" range="{{picker2Range}}" bindchange="normalPickerBindchange2">
+                  {{picker2Range[picker2Value]}}随机贺卡
+              </picker>
+            </view>   
+         </view>  -->
+    </view>
+    <!--购买数量上面的空白区域  -->
+    <view class='whiteSpace'></view>
+</view>
+
+<!--购买数量  -->
+<view class='container92'>
+    <view class='purchaseText left'><text>购买数量</text></view>
+    <view class='purchaseNum right'>
+        <text class='minus' bindtap='reduce'>-</text>
+        <text class='number'>{{num}}</text>
+        <text class='minus' bindtap='add'>+</text>
+    </view>
+</view>
+<view class='clear'></view>
+<!--加入购物车  -->
+<button class='addTo' bindtap='readyToOrder'>立即购买</button>
+
+  

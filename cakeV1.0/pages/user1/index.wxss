@@ -1,0 +1,151 @@
+.container{
+  padding: 0;
+  background-color:#f5f5f5;
+}
+.userinfo{
+  width: 100%;
+  height: 265rpx;
+  background-color: #58a4b4;
+}
+.userinfo button{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  font-size: 11pt;
+  line-height: 160rpx;
+  margin-top: 50rpx;
+}
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx 20rpx 20rpx 88rpx;
+  border-radius: 50%;
+  float: left;
+}
+.userinfo-nickname{
+  color: #fff;
+  font-size: 18pt;
+}
+.userinfo-member{
+  width: 150rpx;
+  height: 40rpx;
+  background-color: #acd2da;
+  color: #58a4b4;
+  font-size: 13pt;
+  border-radius: 40rpx;
+  display: block;
+  text-align: center;
+  line-height: 40rpx;
+}
+.userinfo-regmember{
+  width: 100rpx;
+  height: 40rpx;
+  background-color: #acd2da;
+  color: #58a4b4;
+  font-size: 11pt;
+  border-radius: 40rpx;
+  display: block;
+  text-align: center;
+  line-height: 40rpx;
+}
+.userinfo-msg{
+  width: 460rpx;
+  float: left;
+  margin-top: 35rpx;
+}
+.userinfo-msg text{
+  margin-top: 20rpx;
+}
+.arrows{
+  width: 16rpx;
+  height: 36rpx;
+  float: right;
+  margin-top: -75rpx;
+}
+/* ------------------------------- */
+.coupoi{
+  width: 100%;
+  height: 125rpx;
+  border-top: 1rpx solid #99c6cf;
+  background-color: #68adbb;
+  line-height: 30rpx;
+  text-align: center;
+  color: #fff;
+}
+.coupoi text{
+  display: block;
+  margin-top: 25rpx;
+}
+.coupon{
+  height: 124rpx;
+  width: 374rpx;
+  float: left;
+  border-right: 1rpx solid #99c6cf;
+}
+.coupon text:first-child{
+  font-size: 32rpx;
+}
+.coupon text:nth-child(2){
+  font-size: 26rpx;
+  color: #bdd9df;
+}
+.points{
+  height: 124rpx;
+  width: 375rpx;
+  float: left;
+}
+.points text:first-child{
+  font-size: 32rpx;
+}
+.points text:nth-child(2){
+  font-size: 26rpx;
+  color: #bdd9df;
+}
+/*-----------------------------  */
+.project{
+  width: 96%;
+  padding: 0 2%;
+  margin-top: 10rpx;
+  background:#ffffff;
+}
+.project view{
+  height: 110rpx;
+  line-height: 110rpx;
+  font-size: 32rpx;
+  color: #333;
+  border-bottom:1px solid #f5f5f5;
+}
+.project view image{
+  width: 16rpx;
+  height: 36rpx;
+  float: right;
+  margin-top:37rpx;
+}
+.project .isbinding{
+  float: right;
+  margin: 0;
+}
+.isbinding text{
+  margin-right: 50rpx;
+  color: #999;
+}
+
+/* ---------------------------- */
+.myconfig{
+  margin-top: 10rpx;
+  width: 96%;
+  padding: 0 2%;
+  font-size: 26rpx;
+  color: #999;
+  background: #ffffff;
+  border-bottom: 1px solid #f5f5f5;
+}
+.myconfig text{
+  margin-right: 30rpx;
+}
+.myconfig view{
+  height: 84rpx; 
+  line-height: 84rpx;
+  border-bottom: 1px solid #f5f5f5;
+  background: #ffffff;
+}

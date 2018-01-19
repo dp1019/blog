@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<!--index.wxml-->
+<view class='container100'>
+    <view class='box'>
+        <view>
+            <image src='{{strawberryLove}}'></image>
+        </view>
+        <view class='location'>
+            <image src='{{positionIcon}}' mode='widthFix'></image>
+            <text class='positionName'>{{positionName}}</text>
+        </view>
+        <view class='book left'>
+            立即预定
+        </view>
+    </view>
+</view>
+<view class='secondContainer100'>
+<!--选项  -->
+<view class='specialArea'>
+  <movable-area>
+    <movable-view style="width:{{optionNum}};" direction="horizontal" out-of-bounds="false" inertia="true" friction="3" damping="30">
+      <view class='bigbox'>
+          <!--选中后为 selectedOption 中定义的样式 -->
+        <view class="{{ 0 == active ? 'selectedOption':'options'}}" bindtap="choose" data-value="0">全部</view>
+        <view class="{{cate.id == active?'selectedOption':'options'}}" wx:for="{{cates}}" wx:for-item="cate"bindtap="choose" data-value="{{cate.id}}">
+              {{cate.name}}
+        </view> 
+      </view><!--选项结束  -->
+    </movable-view>
+  </movable-area>
+</view>
+<!--展示区  -->
+  <view class="container92">
+  <view class='cateBox circle' wx:for="{{cakes}}" wx:for-item="cake">
+        <navigator class='cakeParent' url='/pages/index/noComment/index?index={{index}}'>
+            <image src="{{cake.imgs[0]}}" class='cakeImg'></image>
+        </navigator>
+        <view class='fontPadding'>
+            <view><text class='cake_cate'>{{cake.title}}</text></view>
+            <view><text class='salePrice fl'>￥{{cake.standards[0].member_price}}</text></view>
+        </view>
+  </view>
+</view>
+</view>

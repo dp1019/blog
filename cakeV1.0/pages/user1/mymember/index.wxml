@@ -1,0 +1,11 @@
+<view class='box'>
+  <view class='portrait'>
+    <image src='../images/tx.png'></image>
+  </view>
+  <view class='right'>
+    <text>会员特权</text>
+  </view>
+  <view class='content'>
+    <text>{{content}}</text>
+  </view>
+</view>

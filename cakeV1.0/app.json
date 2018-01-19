@@ -1,0 +1,75 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/index/productDetails/index",
+    "pages/index/noComment/index",
+    "pages/index/allComment/index",
+    "pages/mine/coupon/index",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/user/index",
+    "pages/user/phone/index",
+    "pages/user/phone/unbind/index",
+    "pages/user/info/info",
+    "pages/user/info/editname/index",
+    "pages/user/info/editpass/index",
+    "pages/user/question/index",
+    "pages/user/question/answer/index",
+    "pages/user/integral/index",
+    "pages/user/mymember/index",
+    "pages/user/address/add/addressAdd",
+    "pages/user/address/selected/addressChoice",
+    "pages/user/address/edit/addressEdit",
+    
+    "pages/integral/index",
+    "pages/order/index",
+    "pages/order/shoppingnull/index",
+    "pages/order/shoppingeditor/index",
+    "pages/order/shopping/index",
+    "pages/order/ordersub/index",
+    "pages/order/ordersta/index",
+    "pages/order/comment/index",
+    "pages/order/finishorder/index",
+    "pages/order/orderpaid/index",
+    "pages/member/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#58a4b4",
+    "navigationBarTitleText": "屿蓝朵蛋糕",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabBar/home.png",
+        "selectedIconPath": "images/tabBar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/member/index",
+        "text": "会员",
+        "iconPath": "images/tabBar/member.png",
+        "selectedIconPath": "images/tabBar/member_selected.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "images/tabBar/order.png",
+        "selectedIconPath": "images/tabBar/order_selected.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine_selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "downloadFile": 10000
+  }
+}

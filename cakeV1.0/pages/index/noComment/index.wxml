@@ -1,0 +1,123 @@
+<!--pages/product/productDetailsIntroduce.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+<swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="true" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+    <block wx:for="{{cakeDetails.imgs}}">
+        <swiper-item>
+        <image src="{{item}}" class='img' mode='widhtFix'/>
+        </swiper-item>
+    </block>
+</swiper>
+
+    <view class='line_height main_top container92'>
+        <view class='left productname'>产品名称：{{cakeDetails.title}}</view>
+        <view class='right productprice'>价格：￥{{nowPrice}}</view>
+        <view class='clear'></view>
+    </view>
+    <view class='blank height1'></view>
+    <view class='specification container92'>
+        <navigator url='/pages/index/productDetails/index?index={{index}}'>
+            <view class='left'>
+                选择规格：{{cakeDetails.standards[0].name}}
+            </view>
+            <view class='right arrow'>></view>
+            <view class='clear'></view>
+        </navigator>       
+    </view>
+    <view class='blank height2'></view>
+  <!-- 10元优惠券等待领取 -->
+    <view class='discounts container92' hidden="{{code_status}}">
+        <view class='left'>
+            领取优惠券
+        </view>
+        <view class='right'>></view>
+        <view class='clear'></view>
+    </view>
+    <view class='comment'>
+        <image src="../images/com.png" mode='widthFix'></image>
+    </view>
+    <view class='content'>
+      
+
+    <!--如果有评论则显示-->
+    <view class='container92'>
+        <view class='foodie'>吃货评论（{{count}}）</view>
+        <view>
+        <!--上面这个盒子用于处理有无评论的判断  -->
+        <view class='cate_box container100'>
+            <view wx:for="{{cate}}" class='text_center'>{{item.cateName}}</view>
+        </view>
+        <view wx:for="{{data}}" class='message_top'>
+      <!-- 评论用户头像 -->
+            <view class='left photo'>
+                <view>
+                    <image src='{{item.photo}}'></image>
+                </view>  
+            </view>
+            <!-- 用户名字 -->
+            <view class='left message'>
+                <view class='nameAndDate'>
+                    <text class='left'>{{item.name}}</text>
+                    <text class='right'>{{item.update_time}}</text>
+                    <view class='clear'></view>
+                </view>
+                <view class='mesg'>{{item.message}}</view>
+                <!-- 用户评论的图片 -->
+                <view wx:if="{{item.img !== '' }}" class='img_box'>
+                    <view wx:for="{{item.img}}" class='message_img left'>
+                        <image src="{{item.imgUrl}}" mode='widthFix'></image>
+                    </view>
+                </view>
+                <view class='mesg2' wx:if="{{item.reply != ''}}">
+                    掌柜回复：{{item.reply}}
+                </view>
+            </view>
+            <view class='clear'></view>            
+        </view>
+        <view class='check text_center' bindtap='toAllComment'>
+                查看全部评论
+        </view>
+    </view>
+    <!-- 如果没有评论则显示 -->
+    <view class='noComment'>
+        <image src='{{img}}' class='left'></image>
+        <text>少女/少年，写下第一个评论成为魔法少女/少年吧~</text>
+    </view>
+  <!-- 上面是用户评论   -->
+    </view>
+    
+    
+    <view class='introduce'>
+       介绍详情   
+    </view>
+    <view class='introduce_date container92'>
+        <!-- <view class='title'>{{item.title}}</view>
+        <view class='title'>口味： <text class='content'>{{item.flavor}}</text></view>
+        <view class='title'>甜度： <text class='content'>{{item.sweetness}}</text></view>
+        <view class='title'>适合人群： <text class='content'>{{item.crowd}}</text></view>
+        <view class='title'>保鲜时限： <text class='content'>{{item.retainFreshness}}</text></view>
+        <view class='title'>原材料： <text class='content'>{{item.material}}</text></view> 
+        <view class="whiteSpace"></view> -->
+        <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    </view>
+  </view>
+
+<!-- 底部 -->
+<view id='footer' class='container100'>
+    <!-- 购物车 -->
+    <view class='shoping' bindtap='goCart'>
+        <view>
+            <image src="{{shoping}}" class='shoping_img'></image>
+            <view class='shop_num text_center'>{{shopNum}}</view>
+        </view>
+        <view class='text_center' >
+        购物车</view>
+    </view>
+    <!-- 加入购物车 -->
+    <view class='join text_center' hover-class='hover_join' bindtap='toCart'>
+      加入购物车
+    </view>
+    <!-- 立即购买 -->
+    <view class='join text_center' hover-class='hover_join' bindtap='toBuy' data-index="{{index}}">
+      立即购买
+    </view>
+</view>

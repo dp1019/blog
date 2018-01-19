@@ -1,0 +1,174 @@
+/* pages/product/product.wxss */
+/* 公共样式 */
+.container100{
+  width: 100%;
+}
+.container50{
+  width: 46.5%;
+}
+#main{
+  width: 92%;
+  margin: 0 auto;
+}
+.left{
+  float:left
+}
+.right{
+  float:right
+}
+.clear{
+  clear:both;
+}
+.line_height{
+  line-height: 80rpx;
+}
+.text_center{
+  text-align: center;
+}
+.text_left{
+  text-align: left;
+}
+.text_right{
+  text-align: right;
+}
+.text_color1{
+  color: #cdcdcd;
+}
+
+/* 页面css */
+.main_top{
+    margin-top: 34rpx;
+    line-height: 100rpx;
+}
+.cate_box{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.cate_box>view{
+  width: 22.8%;
+  line-height: 70rpx;
+  color: #b0b0b0;
+  border: 1rpx solid #cccccc;
+  border-radius: 35rpx;
+  font-size: 30rpx;
+}
+/* 评论 */
+.message_top{
+  margin-top: 60rpx;
+}
+.photo{
+  width: 20%;
+}
+.mesg{
+  font-size: 32rpx;
+  color: #adadad;
+  margin-bottom: 10rpx;
+}
+.mesg2{
+    font-size: 32rpx;
+    line-height: 34rpx;
+    color: #adadad;
+}
+.message{
+  width: 80%;
+}
+.photo>view{
+  width: 100rpx;
+  height: 100rpx;
+}
+.photo>view>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.message>view{
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.message>view>text:nth-child(1){
+  color: #494949;
+}
+.message>view>text:nth-child(2){
+  color: #adadad;
+}
+.main_bottom{
+    margin: 100rpx auto;
+}
+.main_bottom>image{
+    width: 20%;
+}
+.main_bottom>text{
+    color: #c6c4c4
+}
+/* 底部 */
+#footer{
+    height: 90rpx;
+    margin-top: 30rpx;
+    position: fixed;
+    bottom: 0;
+}
+#footer>view{
+    float: left;
+}
+#footer>view:nth-child(2){
+    border-left: 2rpx solid #fff;
+    border-right: 2rpx solid #fff;
+}
+
+.shoping{
+    width: 27%;
+}
+.shoping>view:nth-child(1){
+    position: relative;
+    height: 50%;
+}
+.shop_num{
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 28rpx;
+    color: #fff;
+    border-radius: 50%;
+    background: #f33c3c;
+    position: absolute;
+    left: 55%;
+    top: 0;
+}
+.shoping>view:nth-child(2){
+    height: 50%;
+    color: #666;
+    font-size: 30rpx;
+}
+.shoping_img{
+    width: 50rpx;
+    height: 40rpx;
+       
+    margin-left: 80rpx;
+}
+.join{
+    width: 36%;
+    line-height: 90rpx;
+    background: #58a4b4;
+    color: #fff;
+}
+
+.hover_join{
+    background: #fff;
+    color: #58a4b4;
+}
+/* 用户评论的图片 */
+.img_box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.message_img{
+    width: 30%;
+    margin-right: 3%;
+}
+.message_img>image{
+    width: 100%;
+    border-radius: 10rpx;
+}

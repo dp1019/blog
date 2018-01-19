@@ -1,0 +1,76 @@
+/* pages/address/addressChoice.wxss */
+.box{
+  width: 100%;
+  height: 100%;
+}
+.choiceList{
+  width: 90%;
+  height: auto;
+  margin: 30rpx auto 1rpx;
+}
+.list{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10%;
+  
+}
+.choiceimg{
+  width: 14%;
+  height:82rpx;
+  float: left;
+}
+.choiceimg image{
+  width: 100%;
+  height: 100%;
+}
+.location{
+  width: 51%;
+  height: auto;
+  float: left;
+  margin-left: 3%;
+  font-family: '微软雅黑';
+  font-size: 32rpx;
+  color: #333333;
+}
+.location text:nth-child(2){
+ margin-left: 3%;
+}
+.location text:nth-child(3){
+  display: inline-block;
+  font-size: 26rpx;
+  color: #666666;
+}
+.ico{
+  width: 4%;
+  height: auto;
+  float: right;
+}
+.ico image:nth-child(1){
+  width: 28rpx;
+  height: 28rpx;
+}
+.ico view{
+  margin-top: -1%;
+  width: 30rpx;
+  height: 30rpx;
+}
+.ico view image{
+  width: 100%;
+  height: 100%;
+}
+.clear{
+  clear: both;
+}
+.box view:nth-child(2) button{
+  width: 100%;
+  height: auto;
+  background: #58a4b4;
+  font-family: '微软雅黑';
+  font-size: 36rpx;
+  color: #ffffff;
+  line-height: 80rpx;
+  border-radius: 0rpx;
+  position: fixed;
+  bottom:0rpx;
+  left: 0rpx;
+}

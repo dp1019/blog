@@ -1,0 +1,89 @@
+<!--pages/order/ordersta/index.wxml-->
+<view class='box'>
+  <view class='content'>
+    <view class='state'>
+      配送中
+    </view>
+    <!-- 地址  -->
+    <view class='addresses' >
+      <view class='addressimg'>
+        <image src='{{img}}'></image>
+      </view>
+      <view class='location'> 
+        <text>{{username}}</text>
+        <text>{{phone}}</text>
+        <text>{{address}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 配送时间  -->
+    <view class='distribution'>
+      <text>配送时间</text>
+      <text>{{time}}</text>
+    </view>
+    <!-- 时间段  -->
+    <view class='timeSlot'>
+      <text>时 间 段</text>
+      <text>{{timeSlot}}</text>
+    </view>
+    <!-- 购买产品  -->
+    <view class='commodity'  wx:for="{{cakes}}" wx:for-item="i">
+      <!-- 商品图片  -->
+      <view class='comImg'>
+        <image src='{{i.comImg}}'></image>
+      </view>
+      <!-- 商品详情  -->
+      <view class='details'>
+        <view class='cakeName'>
+          <text>{{i.cakename}}</text>
+          <text>￥{{i.price}}</text>
+        </view>
+        <text>{{i.spec}}</text>
+        <view class='cakeNum'>
+          <text>{{i.candle}}</text>
+          <text>×{{i.num}}</text>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 留言  -->
+    <view class='leaveWord'>
+      <view class='word'>
+        <text>留</text>
+        <text>言</text>
+      </view>
+      <view class='mess'>
+        <text>{{message}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 优惠券  -->
+    <view class='Coupon'>
+      <view class='Conword'>
+        <text>优</text>
+        <text>惠</text>
+        <text>券</text>
+      </view>
+      <view>
+        <text>-￥{{CouponPrice}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 实付款  -->
+    <view class='Disbursements'>
+      <view class='disword'>
+        <text>实</text>
+        <text>付</text>
+        <text>款</text>
+      </view>
+      <view>
+        <text>￥{{disPrice}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 催单  -->
+    <view class='Reminder'>
+      <button hover-class='act'>催单</button>
+    </view>
+  </view>
+</view>

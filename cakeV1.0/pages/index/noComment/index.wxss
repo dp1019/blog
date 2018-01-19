@@ -1,0 +1,289 @@
+/* pages/product/productDetailsIntroduce.wxss */
+@import "/wxParse/wxParse.wxss";
+.container100{
+  width: 100%;
+}
+.content{
+  margin-bottom:90rpx;
+}
+.container50{
+  width: 46.5%;
+}
+.container92{
+    font-size: 30rpx;
+    width: 92%;
+    margin: 0 auto;
+    
+}
+.left{
+  float:left
+}
+.right{
+  float:right
+}
+.clear{
+  clear:both;
+}
+.line_height{
+  line-height: 80rpx;
+}
+.text_center{
+  text-align: center;
+}
+.text_left{
+  text-align: left;
+}
+.text_right{
+  text-align: right;
+}
+.text_color1{
+  color: #cdcdcd;
+}
+/* 轮播图 */
+swiper{
+    width: 100%;
+    height: 490rpx;
+}
+.img{
+    width: 100%;
+}
+.productprice{
+  color: #58a4b4;
+}
+.productname{
+  font-size: 30rpx;
+}
+.main_top{
+  line-height: 145rpx;
+}
+.specification{
+  line-height: 96rpx;
+  
+}
+.specification>view{
+    line-height: 66rpx;
+}
+/* .specification>view:nth-child(2){
+    color: #999999;
+} */
+.arrow{
+    color: #999999;
+}
+.discounts{
+  line-height: 100rpx;
+}
+.discounts>view:nth-child(2){
+    color: #adadad;
+}
+.comment{
+    padding: 30rpx 0;
+    width: 100%;
+  text-align: center;
+  height: 35rpx;
+background: #f5f5f5;
+}
+.foodie{
+    line-height: 110rpx;
+    border-bottom: 2rpx solid #f5f5f5;
+}
+.comment image{
+  width: 50%;
+}
+.cate_box{
+  font-size: 26rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.cate_box>view{
+    padding: 0 10rpx;
+  width: 20%;
+  line-height: 50rpx;
+  color: #b0b0b0;
+  border: 1rpx solid #cccccc;
+  border-radius: 25rpx;
+  font-size: 30rpx;
+}
+/* 评论 */
+.message_top{
+  margin-top: 60rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+  padding-bottom: 20rpx;
+}
+.photo{
+  width: 20%;
+}
+.mesg{
+  font-size: 32rpx;
+  color: #adadad;
+  margin-bottom: 10rpx;
+}
+.mesg2{
+    font-size: 32rpx;
+    line-height: 34rpx;
+    color: #adadad;
+}
+.message{
+  width: 80%;
+}
+.photo>view{
+  width: 100rpx;
+  height: 100rpx;
+}
+.photo>view>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.message>view{
+    color: #666666;
+  line-height: 38rpx;
+  font-size: 28rpx;
+}
+.message>view>text:nth-child(1){
+  color: #333333;
+}
+.message>view>text:nth-child(2){
+  color: #999999;
+}
+/* 查看全部评论 */
+.check{
+  width: 40%;
+  line-height: 68rpx;
+  border: 1rpx solid #58a4b4;
+  border-radius: 34rpx;
+  margin:50rpx auto;
+  color: #58a4b4;
+}
+/* 介绍详情 */
+.introduce_date>view{
+    line-height: 70rpx;
+    font-size: 34rpx;
+}
+.introduce_date>view>text{
+    color: #adadad;
+}
+/* 底部 */
+#footer{
+    /* font-size: 36rpx; */
+    position: fixed;
+    bottom: 0;
+    height: 92rpx;
+    margin-top: 30rpx;
+}
+#footer>view{
+    float: left;
+}
+#footer>view:nth-child(2){
+    border-left: 2rpx solid #fff;
+    border-right: 2rpx solid #fff;
+}
+
+.shoping{
+    padding-top:2rpx;
+    width: 27%;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+.shoping>view:nth-child(1){
+    position: relative;
+    height: 52%;
+}
+.shop_num{
+    width: 25rpx;
+    height:25rpx;
+    line-height: 25rpx;
+    font-size: 18rpx;
+    color: #fff;
+    border-radius: 50%;
+    background: #f33c3c;
+    position: absolute;
+    left: 55%;
+    top: 7rpx;
+}
+.shoping>view:nth-child(2){
+    height: 48%;
+    color: #666;
+    font-size: 30rpx;
+}
+.shoping_img{
+    width: 50rpx;
+    height: 40rpx;
+       
+    margin-left: 80rpx;
+}
+.join{
+    width: 36%;
+    line-height: 92rpx;
+    background: #58a4b4;
+    color: #fff;
+}
+
+.hover_join{
+    background: #fff;
+    color: #58a4b4;
+}
+/* 用户评论的图片 */
+.img_box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.message_img{
+    width: 30%;
+    margin-right: 3%;
+}
+.message_img>image{
+    width: 100%;
+    border-radius: 10rpx;
+}
+/* 没有评论 */
+.noComment{
+    padding: 30rpx 0;
+    line-height: 38rpx;
+}
+.noComment>image{
+    width: 42rpx;
+    height: 42rpx;
+}
+
+.noComment>text{
+    padding-left: 10rpx;
+    color: #999;
+    line-height: 60prx;
+    font-size: 27rpx;
+}
+.blank{
+    width: 100%;
+    background: #f5f5f5;
+}
+.height1{
+    height: 10rpx;
+}
+.height2{
+    height: 3rpx;
+}
+.nameAndDate{
+    line-height: 50rpx!important;
+}
+.introduce{
+    font-size: 28rpx;
+    line-height: 90rpx;
+    background: #f5f5f5;
+    text-align: center;
+    color: #ccc;
+}
+.title{
+    font-size: 30rpx!important;
+    color: #333;
+}
+.content{
+    font-size: 28rpx;
+    color: #999;
+}
+.whiteSpace{
+    width: 100%;
+    height: 100rpx!important;
+}
+

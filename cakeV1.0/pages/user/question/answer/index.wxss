@@ -1,0 +1,18 @@
+.box{
+  width: 95%;
+  margin: 0 auto;
+}
+text{
+  display: block;  
+  font-size: 32rpx;
+  color: #333;
+  margin: 10rpx 0;
+}
+.box view{
+  width: 100%;
+  margin: 40rpx 0;
+}
+.box .context{
+  font-size: 30rpx;
+  color: #666;
+}

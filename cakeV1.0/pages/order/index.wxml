@@ -1,0 +1,46 @@
+<!--pages/order/index.wxml-->
+<view class='ordertype'>
+  <view class="{{0 == active_number ? 'active' : ''}}" bindtap="choose" data-value="0">全部订单</view>
+  <view class="{{1 == active_number ? 'active' : ''}}" bindtap="choose" data-value="1">待付款</view>
+  <view class="{{3 == active_number ? 'active' : ''}}" bindtap="choose" data-value="3">待评论</view>
+</view>
+<view class='all'>
+  <view class='orders' wx:for="{{cake}}" wx:for-index="idx" wx:for-item="cake">
+    <view class='state'>
+      <text>订单号：{{cake.ordernum}}</text>
+      <text>待付款</text>
+    </view>
+    <view class='main' wx:for="{{cake.product}}" wx:for-index="index" wx:for-item="product">
+      <image src='{{product.commodityimg}}'></image>
+      <view class='name'>
+        <text>{{product.commodityname}}</text>
+        <text>￥{{product.original}}</text>
+      </view>
+      <view class='size'>
+        {{product.size}}
+      </view>
+      <view class='num'>
+        <text>{{product.bestowed}}</text>
+        <text>×{{product.num}}</text>
+      </view>
+    </view>
+    <view class='clear'></view>
+    <view class='total'>
+      <text>合计：￥{{cake.totalprice}}</text>
+      <view class="paid {{cake.condition == 1 ? '':'nostatus'}}" bindtap='paid'>马上付款</view>
+      <view class="{{cake.condition == 1 ? '':'nostatus'}}" bindtap='cancelpaid'>取消订单</view> 
+      <view class="{{cake.condition == 2 ? '':'nostatus'}}" bindtap='reminders'>催单</view>
+      <view class="paid {{cake.condition == 3 ? '':'nostatus'}}" bindtap='commentnow'>马上评论</view>
+      <view class="{{cake.condition == 4 ? '':'nostatus'}}" bindtap='seecomment'>查看评论</view>  
+    </view>
+  </view>
+</view>
+<view class="{{showView?'board1':'board'}}" bindtap='board'>
+  <view class='popup'>
+    <view>是否确定取消</view>
+    <button bindtap='cancel'>取消</button>
+    <button bindtap='determine'>确定</button>
+  </view>
+</view>
+
+

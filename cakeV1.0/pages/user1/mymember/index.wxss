@@ -1,0 +1,25 @@
+.box{
+  width: 95%;
+  margin: 0 auto;
+}
+.portrait{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 50rpx auto 90rpx;
+}
+image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.right{
+  width: 100%;
+  text-align: center;
+  font-size: 18pt;
+  color: #333;
+}
+.content{
+  margin-top: 80rpx;
+  font-size: 30rpx;
+  color: #999;
+}

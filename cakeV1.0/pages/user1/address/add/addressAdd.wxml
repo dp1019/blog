@@ -1,0 +1,55 @@
+<view class='wrap'>
+  <form bindsubmit='addressSubmit'>
+    <view class='inputbox'>
+      <view class='lxr fl'>
+        <text>联  系  人</text>
+      </view>
+      <input name="lxr" class='lxript fl' value='' placeholder='请输入联系人信息'></input>
+      <view class='clear'></view>
+    </view>
+    <view class='inputbox'>
+      <view class='lxr fl'>
+        <text>联系电话</text>
+      </view>
+      <input name="phone" class='lxript fl' value='' type='number' placeholder='请输入联系电话'></input>
+      <view class='clear'></view>
+
+    </view>
+    <!-- <view class='inputbox relative'>
+      <view class='lxr fl'>
+        <text>所在地区</text>
+      </view>
+      <input class='lxript fl lxrbg' value='地区测试'>
+      <image class='absolute iimg' src='../images/right_arr_icon.png'></image>
+      </input>
+
+      <view class='clear'></view>
+
+    </view> -->
+    <view class='inputbox relative'>
+      <!-- <view class="section__title">省市区选择器</view> -->
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <view class='lxr fl'>当前选择</view>
+          <input name="region" class='lxript fl lxrbg' placeholder='请选择地区' value='{{region[0]}} {{region[1]}} {{region[2]}}' disabled='disabled'>
+               <image class='absolute iimg' src='../images/right_arr_icon.png'></image>
+          </input>
+          <!-- <view class="fk fl">{{region[0]}} {{region[1]}} {{region[2]}}</view>  -->
+          <view class='clear'></view>
+        </view>
+      </picker>
+    </view>
+    <view class='inputbox'>
+      <view class='lxr fl'>
+        <text>详细地址</text>
+      </view>
+      <input name = 'addressdetail' class='lxript fl' placeholder='请输入详细地址' value=''></input>
+
+      <view class='clear'></view>
+
+    </view>
+    <view>
+      <button form-type='submit'  hover-stay-time="5000" hover-class='hoverbtn' class='abutton absolute'>保 存</button>
+    </view>
+  </form>
+</view>

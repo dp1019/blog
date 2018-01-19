@@ -1,0 +1,101 @@
+<!--pages/order/ordersta/index.wxml-->
+<view class='box'>
+  <view class='content'>
+    <view class='state'>
+      待支付
+    </view>
+    <!-- 地址  -->
+    <view class='addresses' >
+      <view class='addressimg'>
+        <image src='{{img}}'></image>
+      </view>
+      <view class='location'> 
+        <text>{{order.consignee}}</text>
+        <text>{{order.receiving_telephone}}</text>
+        <text>{{order.address}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 配送时间  -->
+    <view class='distribution'>
+      <text>配送时间</text>
+      <text>{{order.day}}</text>
+    </view>
+    <!-- 时间段  -->
+    <view class='timeSlot'>
+      <text>时 间 段</text>
+      <text>{{order.time}}</text>
+    </view>
+    <!-- 购买产品  -->
+    <view class='commodity'  wx:for="{{order.orderdetails}}" >
+      <!-- 商品图片  -->
+      <view class='comImg'>
+        <image src='{{item.img}}'></image>
+      </view>
+      <!-- 商品详情  -->
+      <view class='details'>
+        <view class='cakeName'>
+          <text>{{item.cake_name}}</text>
+          <text>￥{{item.nowPrice}}</text>
+        </view>
+        <text>规格</text>
+        <view class='cakeNum'>
+          <text>{{item.standard_name}}</text>
+          <text>×{{item.num}}</text>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 留言  -->
+    <view class='leaveWord'>
+      <view class='word'>
+        <text>留</text>
+        <text>言</text>
+      </view>
+      <view class='mess'>
+        <input type='text' value='{{order.message}}'></input>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 蜡烛 -->
+    <view class='Coupon'>
+      <view class='word'>
+        <text>蜡</text>
+        <text>烛</text>
+      </view>
+      <view>
+        <text>x1</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 优惠券  -->
+    <view class='Coupon'>
+      <view class='Conword'>
+        <text>优</text>
+        <text>惠</text>
+        <text>券</text>
+      </view>
+      <view>
+        <text>-￥{{CouponPrice}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 实付款  -->
+    <view class='Disbursements'>
+      <view class='disword'>
+        <text>实</text>
+        <text>付</text>
+        <text>款</text>
+      </view>
+      <view>
+        <text>￥{{order.total_price-CouponPrice}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!-- 催单  -->
+    <view class='Reminder'>
+      <button hover-class='act'>马上付款</button>
+      <button class='act'>取消订单</button>
+    </view>
+  </view>
+</view>

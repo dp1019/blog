@@ -1,0 +1,5 @@
+<!--pages/mine/mine.wxml-->
+<button class='coupon' bindtap='toCpoupon'>
+    <text class='couponNum'>3张</text>
+    <text class='couponName'>优惠券</text>
+</button>

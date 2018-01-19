@@ -1,0 +1,5 @@
+<!--pages/address/index.wxml-->
+<view>
+  <button bindtap="bindViewTap">新增地址</button>
+</view>
+

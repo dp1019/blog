@@ -1,0 +1,34 @@
+<view class="box">
+  <view>
+    <text> 头 像 </text>
+    <image src='../images/002.png'></image>
+    <image src="{{photo}}" class='photo'></image>
+  </view>
+  <view  bindtap='editname'>
+    <text> 昵 称 </text>
+    <image src='../images/002.png'></image>
+    <text class='fr'>{{user}}</text>
+  </view>
+  <view bindtap='editgender'>
+    <text> 性 别 </text>
+    <image src='../images/002.png'></image>
+    <text class='fr'>{{gender}}</text>
+  </view>
+  <view>
+    <text> 生 日 </text>
+    <image src='../images/002.png'></image>
+    <picker mode="date" value="{{dateValue}}" start="1949-01-01" end="2999-12-12" bindchange="datePickerBindchange" class='fr birth'>
+      {{dateValue}}
+    </picker>
+  </view>
+  <view  bindtap='editpass'>
+    <text>修改密码</text>
+    <image src='../images/002.png'></image>
+    <text class='fr'>********</text>
+  </view>
+  <view class="gender hide{{!gen?'show':''}}">
+    <text bindtap='editgender'>修改性别</text>
+    <text>男</text>
+    <text>女</text>
+  </view>
+</view>

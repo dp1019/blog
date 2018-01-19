@@ -1,0 +1,308 @@
+/* pages/order/ordersub/index.wxss */
+body{
+  font-family: '微软雅黑';
+}
+page{
+  background: #f5f5f5;
+  height: 100%;
+  
+}
+.box{
+  width: 100%;
+  margin-bottom:120rpx; 
+}
+.subCoupon1{
+  display:flex;
+  justify-content:space-between;
+  height: 60rpx;
+  width: 96%;
+  padding: 20rpx 2%;
+  /* height: auto; */
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #333333;
+  margin: 0 auto;
+  background: #ffffff;
+  margin-bottom: 10rpx;
+}
+.cakeSize{
+  height: 60rpx;
+  width: 48%;
+  border: 1px solid #e8e8e8;
+  border-radius: 10rpx;
+  font-size:30rpx;
+  text-align: center;
+}
+
+.content{
+  height: auto;
+}
+.address{
+  width: 100%;
+  height: 148rpx;
+  border: 1px solid transparent;
+  background: #ffffff;
+  margin-bottom: 10rpx;
+}
+.info{
+  width: 95%;
+  height: auto;
+  margin: 40rpx auto;
+}
+.orderimg{
+  width: 68rpx;
+  height: 68rpx;
+  float: left;
+}
+.orderimg image{
+  width: 100%;
+  height: 100%;
+}
+.site{
+  width: 80%;
+  height: 68rpx;
+  float: left;
+  font-family: '微软雅黑';
+  line-height: 68rpx;
+  margin-left: 4%;
+}
+.site :nth-child(1){
+  font-size: 30rpx;
+  color: #333333;
+  height: 68rpx;
+}
+.site :nth-child(2){
+  display: inline-block;
+  font-size: 28rpx;
+  color: #666666;
+}
+.arrow{
+  width: 16rpx;
+  height: 36rpx;
+  float: right;
+  margin-top: 2.5%;
+}
+.arrow image{
+  width: 100%;
+  height: 100%;
+}
+.clear{
+  clear: both;
+}
+.distributionTime{
+  width: 96%;
+  padding:0 2%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  background: #ffffff;
+  color: #333333;
+  margin-bottom: 2rpx;
+}
+.distributionTime text:nth-child(1){
+  float: left;
+  
+}
+.disword{
+  width: 34%;
+  float: right;
+
+}
+.disword picker{
+  float: left;
+}
+.disImg{
+  width: 16rpx;
+  height: 36rpx;
+  float: right;
+  margin-top: 2.5%;
+}
+.disImg image{
+  width: 100%;
+  height: 100%;
+}
+.timeSlot{
+  width: 96%;
+  padding: 0 2%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #333333;
+  background: #ffffff;
+}
+.timeSlot text:nth-child(1){
+  float: left;
+  
+}
+.slotWord{
+  width: 34%;
+  float: right;
+
+}
+.slotWord picker{
+  float: left;
+}
+.slotImg{
+  width: 16rpx;
+  height: 36rpx;
+  float: right;
+  margin-top: 2.5%;
+}
+.slotImg image{
+  width: 100%;
+  height: 100%;
+}
+.Prompt{
+  height: auto;
+  font-size:24rpx;
+  color: #cccccc;
+  line-height: 82rpx;
+  text-align: center; 
+}
+.commodity{
+  padding: 5% 2%;
+  width: 96%;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  margin-bottom: 2rpx;
+}
+.comImg{
+  width: 160rpx;
+  height: 160rpx; 
+  border-radius: 5%;
+  float: left;
+  overflow: hidden;
+}
+.comImg image{
+  width: 100%;
+  height: 100%;
+}
+.details{
+  width: 70%;
+  height: auto;
+  float: left;
+  margin-left: 6%;
+  font-family: '微软雅黑';
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 54rpx;
+}
+.cakeName{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  color: #333333;
+}
+.cakeName text:nth-child(2){
+  float: right;
+}
+.cakeNum text:nth-child(2){
+  float: right;
+  font-size: 30rpx;
+  color: #333333;
+}
+.leaveWord{
+  width: 96%;
+  padding: 0 2%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 98rpx;
+  margin-top: 5%;
+  font-size: 30rpx;
+  background: #ffffff;
+  margin-bottom: 2rpx;
+}
+.Lword{
+  width: 20%;
+  height: auto;
+  float: left;
+  
+  line-height: 100rpx;
+  
+}
+
+.Lword text:nth-child(2){
+   float: right;
+}
+.Lmess{
+    float: right;
+    width: 76%; 
+    height: auto;
+    line-height: 100rpx;
+    margin-top: 3.5%;
+}
+.Lmess input{
+  width: 100%;
+  height: 100%;
+}
+.phcolor{
+  color: #333333;
+}
+.subCoupon{
+  height: 100rpx;
+  width: 96%;
+  padding: 0 2%;
+  /* height: auto; */
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #333333;
+  margin: 0 auto;
+  background: #ffffff;
+  margin-bottom: 10rpx;
+}
+.subword{
+  float: left;
+  width: 20%;
+}
+.subword text:nth-child(3){
+  float: right;
+}
+.subword text:nth-child(2){
+  margin-left: 20%;
+}
+.subCou{
+  float: right;
+  width: 58%;
+  color: #cccccc;
+  
+}
+.subCou text{
+  float: left;
+}
+.subImg{
+  float: right;
+  width:16rpx;
+  height:36rpx;
+  margin-top:1.1%;
+}
+.subImg image{
+  width: 100%;
+  height: 100%;
+}
+.Pay{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  text-align: center;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  z-index: 1000;
+  background: #ffffff;
+}
+.payPrice{
+  width: 62.6%;
+  height: auto;
+  float: left;
+}
+.toPrice{
+  width: 37.4%;
+  height: auto;
+  background: #58a4b4;
+  font-size: 36rpx;
+  float: right;
+  color: #ffffff;
+}

@@ -1,0 +1,10 @@
+<view class='box'>
+  
+    <view wx:for='{{quests}}' wx:for-item="quest" wx:for-index="idx">
+      <navigator url='answer/index?index={{idx}}'>
+        <text>{{quest.question}}</text>
+        <image src='../images/002.png'></image>
+      </navigator>
+    </view>
+  
+</view>

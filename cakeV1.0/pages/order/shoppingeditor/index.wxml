@@ -1,0 +1,51 @@
+<!--pages/shoppingeditor/index.wxml-->
+<!--购物车编辑  -->
+<view class="body">
+    <view class="header">
+  <!-- 左边的文字以及圆圈 -->
+    <view class="left">
+      <!-- <image class="yuan" src="images/quanyi.jpg"></image> -->
+      <view >
+        <checkbox bindtap='checkboxAll' style='margin-left:20rpx;margin-top:14rpx;' checked="{{checked_all}}"></checkbox>
+      </view>
+      <!-- <view class="whole" bindtap='checkboxAll'>全部</view> -->
+    </view>
+    <!-- 右边的完成二字 -->
+    <view class="right" bindtap='deleteAll'>清空</view>
+  </view>
+  <view class="main">
+    <checkbox-group bindchange="checkboxChange">
+      <view wx:for="{{cart}}" class="list" hidden='{{item.status}}'>
+        <view class="quan">
+          <checkbox value="{{index}}" checked="{{item.checked}}"></checkbox>
+        </view>
+        <view class="cake">
+            <image src="{{item.cake.imgs[0]}}" class="cakes"></image>
+        </view>
+            <view class="specifications">
+            <!--加减  -->
+                <view class="top">
+                    <text class="reduce" bindtap='reduce' data-index="{{index}}">-</text>
+                    <view class="frame">{{item.num}}</view>
+                    <text class="plus" bindtap='add' data-index="{{index}}">+</text>
+                </view>
+                <!--规格选择  -->
+                <view class="bottom" bindtap="showitem">
+                  <picker bindchange="bindPickerChange" range="{{item.standards}}" data-index="{{index}}" bindtap='update'>
+                  {{item.standards[item.index_]}}
+                  <image src="images/kuang.jpg" class="photo"></image>
+                  </picker>
+                  
+                </view> 
+            </view>
+            <view class="delete" bindtap='delete' data-index='{{index}}'>删除</view>
+      </view>
+    </checkbox-group>
+  </view>
+ 
+    <view class="footer">
+     <!-- <view class="rectangle"></view> -->
+       <view class="price">合计：￥{{totalPrice}}</view>
+       <view class="settlement" bindtap='readyToOrder'>去结算</view>  
+  </view>
+</view>

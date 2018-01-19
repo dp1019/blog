@@ -1,0 +1,60 @@
+.top{
+  widows: 100%;
+  height: 80rpx;
+  background-color: #deedf0;
+  padding: 50rpx 0;
+}
+.top view{
+  width: 398rpx;
+  height: 78rpx;
+  border-radius: 80rpx;
+  background-color: #80bac6;
+  margin: 0rpx auto;
+  border:1rpx solid #5da7b6;
+}
+.top view text{
+  display: block;
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 78rpx;
+}
+/* -------------------------- */
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+text{
+  display: block;
+}
+image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.content{
+  width: 95%;
+  margin: 0 auto;
+}
+.inte {
+  width: 100%;
+  height: 80rpx;
+  clear: both;
+  margin: 60rpx 0;
+}
+.expense{
+  margin-left: 25rpx;
+}
+.expense text:first-child{
+  font-size: 32rpx;
+}
+.expense text:nth-child(2){
+  font-size: 26rpx;
+  color: #999;
+}
+.money{
+  color: #58a4b4;
+  font-size: 36rpx;
+  line-height: 80rpx;
+}

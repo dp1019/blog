@@ -1,0 +1,44 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.box{
+  width: 95%;
+  margin: 0 auto;
+}
+.pox{
+  margin-top: 40rpx;
+}
+form{
+  font-size: 32rpx;
+  color: #333;
+}
+.pox view{
+  height: 66rpx;
+  line-height: 66rpx;
+  margin-bottom: 50rpx;
+}
+.pox input{
+  width: 350rpx;
+  height: 66rpx;
+  margin-left: 30rpx;
+}
+.but{
+  width: 210rpx;
+  height: 66rpx;
+  border-radius: 66rpx;
+  background-color: #58a4b4;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 66rpx;
+}
+.next{
+  width: 100%;
+  background-color: #58a4b4;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

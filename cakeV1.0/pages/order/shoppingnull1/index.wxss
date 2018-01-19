@@ -1,0 +1,31 @@
+/* pages/shoppingnull/index.wxss */
+.center{
+  width: 220rpx;
+  height:auto;
+  margin-left: 270rpx;
+  margin-top: 277rpx;
+}
+.img{
+  width: 191rpx;
+  height: 155rpx;
+
+  margin-left: 12rpx;
+}
+.wenzi{
+  height: auto;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 35rpx;
+}
+.go{
+  height: 60rpx;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  background: #58a4b4;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+}

@@ -1,0 +1,197 @@
+/* pages/order/ordersta/index.wxss */
+body{
+  font-family: '微软雅黑';
+}
+.box{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+.state{
+  width: 100%;
+  height: auto;
+  font-size: 40rpx;
+  color: #58a4b4;
+  text-align: center;
+  line-height: 118rpx;
+}
+.addressimg{
+  width: 68rpx;
+  height:68rpx;
+  float: left;
+}
+.addressimg image{
+  width: 100%;
+  height: 100%;
+}
+.location{
+  width: 85%;
+  height: auto;
+  float: left;
+  margin-left: 3%;
+  font-family: '微软雅黑';
+  font-size: 30rpx;
+  color: #333333;
+}
+.location text:nth-child(2){
+ margin-left: 3%;
+}
+.location text:nth-child(3){
+  display: block;
+  font-size: 28rpx;
+  color: #666666;
+}
+.clear{
+  clear: both;
+}
+.distribution{
+  height: auto;
+  margin-top:10%;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.distribution text:nth-child(2){
+  color: #999999;
+  float: right;
+}
+.timeSlot{
+  height: auto;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.timeSlot text:nth-child(2){
+  color: #999999;
+  float: right;
+}
+.commodity{
+  height: auto;
+  margin-top: 5%;
+  
+}
+.comImg{
+  width: 160rpx;
+  height: 160rpx; 
+  border-radius: 5%;
+  float: left;
+}
+.comImg image{
+  width: 100%;
+  height: 100%;
+}
+.details{
+  width: 70%;
+  height: auto;
+  float: left;
+  margin-left: 6%;
+  font-family: '微软雅黑';
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 54rpx;
+}
+.cakeName{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  color: #333333;
+}
+.cakeName text:nth-child(2){
+  float: right;
+}
+.cakeNum text:nth-child(2){
+  float: right;
+  font-size: 30rpx;
+  color: #333333;
+}
+.clear{
+  clear: both;
+}
+.leaveWord{
+  height: auto;
+  font-size: 30rpx;
+}
+.word{
+  width: 20%;
+  height: auto;
+  float: left;
+  color: #333333;
+  line-height: 100rpx;
+}
+.word text:nth-child(2){
+   float: right;
+}
+.mess{
+    float: right;
+    width: 76%; 
+    height: auto;
+    line-height: 100rpx;
+    text-align: right;
+}
+.mess text{
+  width: 100%;
+  height: 100%;
+  color: #999999;
+}
+.Coupon{
+  height: auto;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 100rpx;
+}
+.Conword{
+  float: left;
+  width: 20%;
+}
+.Conword text:nth-child(3){
+  float: right;
+}
+.Conword text:nth-child(2){
+  margin-left: 20%;
+}
+.Coupon view:nth-child(2){
+  color: #999999;
+  float: right;
+}
+.Disbursements{
+  height: auto;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 100rpx;
+}
+.disword{
+  float: left;
+  width: 20%;
+}
+.disword text:nth-child(3){
+  float: right;
+}
+.disword text:nth-child(2){
+  margin-left: 20%;
+}
+.Disbursements view:nth-child(2){
+  color: #999999;
+  float: right;
+}
+.Reminder{
+  margin-top: 4%;
+}
+.Reminder button{
+  float: right;
+  width: 32%;
+  height: auto;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  background: #58a4b4;
+  border-radius: 30rpx;
+}
+.Reminder .act{
+  background: #666666;
+}
+
+

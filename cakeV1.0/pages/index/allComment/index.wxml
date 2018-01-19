@@ -1,0 +1,59 @@
+<!--pages/product/product.wxml-->
+<!-- 全部评论 -->
+<view id='main'>
+    <view class='main_top'>吃货评论（{{count}}）</view>
+    <view class='cate_box container100'>
+        <view wx:for="{{cate}}" class='text_center'>{{item.cateName}}</view>
+    </view>
+    <view>
+        <view wx:for="{{data}}" class='message_top'>
+            <!-- 评论用户头像 -->
+            <view class='left photo'>
+                <view>
+                    <image src='{{item.photo}}'></image>
+                </view>  
+            </view>
+            <!-- 用户名字 -->
+            <view class='left message'>
+                <view>
+                    <text class='left'>{{item.name}}</text>
+                    <text class='right'>{{item.update_time}}</text>
+                    <view class='clear'></view>
+                </view>
+                <view class='mesg'>{{item.message}}</view>
+                <!-- 用户评论的图片 -->
+                <view wx:if="{{item.img !== '' }}" class='img_box'>
+                    <view wx:for="{{item.img}}" class='message_img left'>
+                        <image src="{{item.imgUrl}}" mode='widthFix'></image>
+                    </view>
+                </view>
+                <view class='mesg2' wx:if="{{item.reply != ''}}">
+                    掌柜回复：{{item.reply}}
+                </view>
+            </view>
+            <view class='clear'></view>
+        </view>
+        <view class='main_bottom text_center'>
+            <image src="{{cryIcon}}" mode='widthFix'></image>
+            <text>已经到底了哦，快去评论吧！</text>
+        </view>
+    </view>
+</view>
+<!--底部-->
+<view id='footer' class='container100'>
+    <!-- 购物车 -->
+    <view class='shoping'>
+        <view>
+            <image src='{{shoping}}' class='shoping_img'></image>
+            <view class='shop_num text_center'>{{shopNum}}</view>
+        </view>
+        <view class='text_center'>购物车</view>
+    </view>
+    <!-- 加入购物车 -->
+    <view class='join text_center' hover-class='hover_join'>加入购物车</view>
+    <!-- 立即购买 -->
+    <view class='join text_center' hover-class='hover_join'>立即购买</view>
+</view>
+
+
+  

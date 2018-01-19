@@ -1,0 +1,159 @@
+/* pages/integral/index.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background: #f5f5f5;
+}
+.specialArea{
+    width: 100%;
+    height: 140rpx;
+    background: #ffffff;
+}
+movable-area{
+  width: 695rpx;
+  height: 120rpx;
+  margin: 0 auto;
+ 
+}
+movable-view{
+    height: 120rpx;
+}
+.bigbox{
+    width: 100%;
+    height: 120rpx;
+    overflow: hidden; 
+
+}
+.options{
+  margin-right: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 120rpx;
+  height: 60rpx;
+  border: 1px solid #8bc7d4;
+  border-radius: 8rpx;
+  font-size: 23rpx;
+  color: #6d90a3;
+  text-align: center;
+  line-height: 60rpx;
+  float: left;
+}
+.options:last-child{
+  margin-right: 0;
+}
+.selectedOption{
+  margin-right: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 120rpx;
+  height: 60rpx;
+  border: 1px solid #8bc7d4;
+  border-radius: 8rpx;
+  font-size: 23rpx;
+  color: #ffffff!important;
+  text-align: center;
+  line-height: 60rpx;
+  background: #58a4b4;
+  float: left;
+}
+.selectedOption:last-child{
+  margin-right: 0;
+}
+.integral-commodity{
+  width: 92%;
+  /* height: 1000rpx; */
+  padding-bottom: 40rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+.commodity{
+  height: 580rpx;
+  width: 48%;
+  border-radius: 15rpx;
+  overflow: hidden;
+  margin-top: 5%; 
+  background:#ffffff;
+}
+.commodity image{
+  width: 100%;
+  height: 350rpx;
+}
+.details{
+  margin-left: 10%;
+  margin-top: 5%; 
+}
+.details view:nth-child(1){
+  font-size: 30rpx;
+  color:#333333;
+}
+.details view:nth-child(2){
+  font-size: 26rpx;
+  color: #666;
+}
+.details .discount{
+  color: #58a4b4;
+  font-size: 34rpx;
+}
+.details .original{
+  color: #666;
+  font-size: 26rpx;
+  text-decoration-line: line-through;
+  margin-left: 10%;
+}
+.commodity button{
+  width: 100%;
+  height: 80rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  background: #58a4b4;
+  line-height: 80rpx;
+  border-radius: 0 0 15rpx 15rpx;
+}
+.board{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+}
+.board1{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.popup{
+  width: 80%;
+  height: 285rpx;
+  box-shadow: 10rpx 10rpx 50rpx #888888;
+  position: fixed;
+  background: #fff;
+  top: 35%;
+  left: 10%;
+}
+.popup view:nth-child(1){
+  margin: 10% auto;
+  font-size: 35rpx;
+  text-align: center;
+}
+.popup button{
+  width: 35%;
+  float: left;
+  height: auto;
+  border-radius: 37rpx;
+  line-height: 65rpx;
+  font-size: 33rpx;
+  margin-left: 10%;
+  color: #fff;
+  background: #58a4b4;
+}
+.popup button:nth-child(2){
+  background: #666;
+}
